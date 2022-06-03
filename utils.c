@@ -2,6 +2,12 @@
 
 #include <stdio.h>
 
+void	ft_error(void)
+{
+	printf("Error");
+	exit(0);
+}
+
 void	ft_print_array(int *stack)
 {
 	int	i;

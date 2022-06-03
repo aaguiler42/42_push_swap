@@ -4,9 +4,12 @@
 # include <stdlib.h>
 
 //Libft functions
-int	ft_atoi(const char *str);
+int	ft_atoi(char *str);
 char	**ft_split(char const *s, char c);
 int	ft_count_words(char const *s, char c);
+
+//Error function
+void ft_error(void);
 
 //Memory functions
 void	*ft_calloc(size_t count, size_t size);
