@@ -12,6 +12,20 @@
 
 #include "push_swap.h"
 
+int	ft_is_ordered(t_stacks *stacks)
+{
+	int	i;
+
+	i = 1;
+	while (stacks->stack_a[i])
+	{
+		if (stacks->stack_a[i] < stacks->stack_a[i - 1])
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
 void	ft_fill_array(t_stacks *stacks, char **numbers)
 {
 	int	i;
@@ -43,6 +57,6 @@ void	ft_fill_stack(t_stacks *stacks, char **numbers, int n)
 		ft_fill_array(stacks, nums);
 		free(nums);
 	}
-	//	if (ft_is_ordered(stacks);
-	ft_print_array(stacks->stack_a);
+	if (!ft_is_ordered(stacks))
+		ft_print_array(stacks->stack_a);
 }

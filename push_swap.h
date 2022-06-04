@@ -32,6 +32,7 @@ int			ft_count_words(char const *s, char c);
 void		*ft_calloc(size_t count, size_t size);
 
 //Utils function
+int			ft_is_ordered(t_stacks *stacks);
 void		ft_fill_array(t_stacks *stacks, char **numbers);
 void		ft_fill_stack(t_stacks *stacks, char **numbers, int n);
 
