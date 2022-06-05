@@ -6,11 +6,11 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 19:06:03 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/06/04 19:17:06 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/06/05 12:05:48 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 #include <unistd.h>
 
 void	ft_free_stacks(t_stacks *stacks)

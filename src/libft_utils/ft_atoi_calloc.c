@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atoi_calloc.c                                      :+:      :+:    :+:   */
+/*   ft_atoi_calloc.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 18:50:01 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/06/04 19:11:11 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/06/05 11:52:56 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../includes/push_swap.h"
 
 int	ft_atoi(char *str, t_stacks *stacks)
 {

@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 18:41:38 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/06/04 19:14:10 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/06/05 11:33:38 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,12 @@ char		**ft_split(char const *s, char c);
 int			ft_count_words(char const *s, char c);
 void		*ft_calloc(size_t count, size_t size);
 
-//Utils function
+//Operations functions
+void		ft_swap_a(t_stacks *stacks);
+void		ft_swap_b(t_stacks *stacks);
+void		ft_swap_both(t_stacks *stacks);
+
+//Utils functions
 int			ft_is_ordered(t_stacks *stacks);
 void		ft_fill_array(t_stacks *stacks, char **numbers);
 void		ft_fill_stack(t_stacks *stacks, char **numbers, int n);
@@ -41,7 +46,7 @@ void		ft_free_stacks(t_stacks *stacks);
 void		ft_error(t_stacks *stacks);
 t_stacks	*ft_inicialize_stacks(char **numbers, int n);
 
-//Trash function
+//Trash functions
 void		ft_print_array(int *stack);
 
 #endif

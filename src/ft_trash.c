@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_trash.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaguiler <aaguiler@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/02 10:16:01 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/06/04 17:10:38 by aaguiler         ###   ########.fr       */
+/*   Created: 2022/06/04 19:09:04 by aaguiler          #+#    #+#             */
+/*   Updated: 2022/06/05 12:05:42 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
+#include <stdio.h>
 
-int	main(int argc, char **argv)
+void	ft_print_array(int *stack)
 {
-	t_stacks	*stacks;
+	int	i;
 
-	stacks = ft_inicialize_stacks(++argv, argc - 1);
-	ft_free_stacks(stacks);
+	i = 0;
+	while (stack[i])
+		printf("%d\n", stack[i++]);
 }
