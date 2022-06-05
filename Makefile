@@ -2,7 +2,8 @@ NAME	= push_swap
 
 SRCS	= src/push_swap.c src/ft_utils.c src/ft_trash.c src/ft_memory.c \
 			src/libft_utils/ft_split.c src/libft_utils/ft_atoi_calloc.c \
-			src/operations/ft_swap.c
+			src/operations/ft_swap.c src/operations/ft_reverse_rotate.c \
+			src/operations/ft_push.c src/operations/ft_rotate.c
 
 OBJS	= ${SRCS:.c=.o}
 

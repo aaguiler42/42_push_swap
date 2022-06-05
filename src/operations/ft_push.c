@@ -6,9 +6,12 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 12:25:39 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/06/05 12:58:45 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/06/05 14:58:20 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../../includes/push_swap.h"
+#include <unistd.h>
 
 void	ft_push(int *stack, int stack_len, int n)
 {
