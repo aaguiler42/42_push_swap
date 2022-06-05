@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 18:41:38 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/06/05 11:33:38 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/06/05 12:59:37 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,11 @@ int			ft_count_words(char const *s, char c);
 void		*ft_calloc(size_t count, size_t size);
 
 //Operations functions
-void		ft_swap_a(t_stacks *stacks);
-void		ft_swap_b(t_stacks *stacks);
-void		ft_swap_both(t_stacks *stacks);
+void		ft_swap_a(t_stacks *stacks, int print);
+void		ft_swap_b(t_stacks *stacks, int print);
+void		ft_swap_both(t_stacks *stacks, int print);
+void		ft_push_a(t_stacks *stacks, int print);
+void		ft_push_b(t_stacks *stacks, int print);
 
 //Utils functions
 int			ft_is_ordered(t_stacks *stacks);

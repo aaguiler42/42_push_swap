@@ -1,2 +1,5 @@
 a.out
 *.swp
+push_swap
+
+*.o
