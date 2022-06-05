@@ -20,6 +20,19 @@ void	ft_free_stacks(t_stacks *stacks)
 	free(stacks);
 }
 
+void	ft_free_struct(t_stacks *stacks)
+{
+	free(stacks);
+	exit(0):
+}
+
+void	ft_free_a_stack(t_stacks *stacks)
+{
+	free(stacks->stack_a);
+	free(stacks);
+	exit(0):
+}
+
 void	ft_error(t_stacks *stacks)
 {
 	write(1, "Error", 5);
@@ -41,7 +54,11 @@ t_stacks	*ft_inicialize_stacks(char **numbers, int n)
 	stacks->size_a = stacks->max_size;
 	stacks->size_b = 0;
 	stacks->stack_a = ft_calloc((stacks->max_size + 1), sizeof(int));
+	if (!stacks->stack_a)
+		ft_free_struct(stacks);
 	stacks->stack_b = ft_calloc((stacks->max_size + 1), sizeof(int));
+	if (!stacks->stack_b)
+		ft_free_a_stack(stacks);
 	ft_fill_stack(stacks, numbers, n);
 	return (stacks);
 }
