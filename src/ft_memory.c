@@ -18,31 +18,32 @@ void	ft_free_stacks(t_stacks *stacks)
 	free(stacks->stack_a);
 	free(stacks->stack_b);
 	free(stacks);
+	exit(0);
 }
 
 void	ft_free_struct(t_stacks *stacks)
 {
 	free(stacks);
-	exit(0):
+	exit(0);
 }
 
 void	ft_free_a_stack(t_stacks *stacks)
 {
 	free(stacks->stack_a);
 	free(stacks);
-	exit(0):
+	exit(0);
 }
 
 void	ft_error(t_stacks *stacks)
 {
 	write(1, "Error", 5);
 	ft_free_stacks(stacks);
-	exit(0);
 }
 
 t_stacks	*ft_inicialize_stacks(char **numbers, int n)
 {
 	struct s_stacks	*stacks;
+	int				i;
 
 	stacks = malloc(sizeof(struct s_stacks));
 	if (!stacks)
@@ -59,6 +60,9 @@ t_stacks	*ft_inicialize_stacks(char **numbers, int n)
 	stacks->stack_b = ft_calloc((stacks->max_size + 1), sizeof(int));
 	if (!stacks->stack_b)
 		ft_free_a_stack(stacks);
+	i = 0;
+	while (i < stacks->max_size)
+		stacks->stack_a[i++] = -1;
 	ft_fill_stack(stacks, numbers, n);
 	return (stacks);
 }

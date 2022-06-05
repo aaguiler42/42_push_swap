@@ -17,7 +17,7 @@ int	ft_is_ordered(t_stacks *stacks)
 	int	i;
 
 	i = 1;
-	while (stacks->stack_a[i])
+	while (i < stacks->size_a)
 	{
 		if (stacks->stack_a[i] < stacks->stack_a[i - 1])
 			return (0);
@@ -26,23 +26,65 @@ int	ft_is_ordered(t_stacks *stacks)
 	return (1);
 }
 
-void	ft_fill_array(t_stacks *stacks, char **numbers)
+void	ft_search_and_replace(int *stack_a, int *aux, int min, int i)
 {
+	int	j;
+
+	j = 0;
+	while (aux[j] != min)
+		j++;
+	stack_a[j] = i;
+	aux[j] = 2147483647;
+}
+
+void	ft_transform_array(int *stack_a, int len, int *aux)
+{
+	int	min;
 	int	i;
 	int	j;
 
 	i = 0;
+	while (i < len)
+	{
+		min = 2147483647;
+		j = 0;
+		while (j < len)
+		{
+			if (aux[j] < min)
+				min = aux[j];
+			j++;
+		}
+		ft_search_and_replace(stack_a, aux, min, i);
+		i++;
+	}
+}
+
+void	ft_fill_array(t_stacks *stacks, char **numbers)
+{
+	int	i;
+	int	j;
+	int	*aux;
+
+	aux = ft_calloc((stacks->max_size + 1), sizeof(int));
+	if (!aux)
+		ft_free_stacks(stacks);
+	i = 0;
 	while (numbers[i])
 	{
 		j = 0;
-		stacks->stack_a[i] = ft_atoi(numbers[i], stacks);
+		aux[i] = ft_atoi(numbers[i], stacks);
 		while (j < i)
 		{
-			if (stacks->stack_a[j++] == stacks->stack_a[i])
+			if (aux[j++] == aux[i])
+			{
+				free (aux);
 				ft_error(stacks);
+			}
 		}
 		i++;
 	}
+	ft_transform_array(stacks->stack_a, stacks->max_size, aux);
+	free(aux);
 }
 
 void	ft_fill_stack(t_stacks *stacks, char **numbers, int n)
@@ -57,8 +99,6 @@ void	ft_fill_stack(t_stacks *stacks, char **numbers, int n)
 		ft_fill_array(stacks, nums);
 		free(nums);
 	}
-	if (!ft_is_ordered(stacks))
-		ft_print_struct(stacks);
-	else
+	if (ft_is_ordered(stacks) == 0)
 		ft_order(stacks);
 }
