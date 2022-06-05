@@ -59,4 +59,6 @@ void	ft_fill_stack(t_stacks *stacks, char **numbers, int n)
 	}
 	if (!ft_is_ordered(stacks))
 		ft_print_struct(stacks);
+	else
+		ft_order(stacks);
 }

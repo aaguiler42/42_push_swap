@@ -45,6 +45,9 @@ void		ft_reverse_rotate_a(t_stacks *stack, int print);
 void		ft_reverse_rotate_b(t_stacks *stack, int print);
 void		ft_reverse_rotate_both(t_stacks *stacks, int print);
 
+//Order functions
+void		ft_order(t_stacks *stacks);
+
 //Utils functions
 int			ft_is_ordered(t_stacks *stacks);
 void		ft_fill_array(t_stacks *stacks, char **numbers);
