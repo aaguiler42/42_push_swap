@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 18:39:40 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/06/05 12:05:44 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/06/05 16:42:36 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,5 @@ void	ft_fill_stack(t_stacks *stacks, char **numbers, int n)
 		free(nums);
 	}
 	if (!ft_is_ordered(stacks))
-		ft_print_array(stacks->stack_a);
+		ft_print_struct(stacks);
 }
