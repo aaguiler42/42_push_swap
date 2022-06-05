@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 18:41:38 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/06/05 14:48:23 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/06/05 15:01:21 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,9 @@ void		ft_push(int *stack, int stack_len, int n);
 void		ft_rotate_a(t_stacks *stack, int print);
 void		ft_rotate_b(t_stacks *stack, int print);
 void		ft_rotate_both(t_stacks *stacks, int print);
+void		ft_reverse_rotate_a(t_stacks *stack, int print);
+void		ft_reverse_rotate_b(t_stacks *stack, int print);
+void		ft_reverse_rotate_both(t_stacks *stacks, int print);
 
 //Utils functions
 int			ft_is_ordered(t_stacks *stacks);
