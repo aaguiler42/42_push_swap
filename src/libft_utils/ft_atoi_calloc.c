@@ -49,9 +49,6 @@ void	*ft_calloc(size_t count, size_t size)
 	if (!memory)
 		return (0);
 	while (i < count * size)
-	{
-		memory[i] = 0;
-		i++;
-	}
+		memory[i++] = 0;
 	return (memory);
 }
