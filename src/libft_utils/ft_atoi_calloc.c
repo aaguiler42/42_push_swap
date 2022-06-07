@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 18:50:01 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/06/07 16:23:00 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/06/07 16:59:27 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,17 @@ void	*ft_calloc(int count, int size)
 	while (i < count * size)
 		memory[i++] = 0;
 	return (memory);
+}
+
+int	ft_strncmp(const char *s1, const char *s2, int n)
+{
+	int	i;
+
+	i = 0;
+	while ((s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0') && i < n - 1)
+		i++;
+	if (n == 0)
+		return (0);
+	else
+		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

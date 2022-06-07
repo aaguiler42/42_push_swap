@@ -1,4 +1,4 @@
-NAME	= push_sw
+NAME	= push_swap
 BNAME	= checker
 
 SRCS	= src/push_swap.c src/ft_utils.c src/ft_trash.c src/ft_memory.c \

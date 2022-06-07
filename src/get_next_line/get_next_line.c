@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 16:04:38 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/06/07 16:24:10 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/06/07 16:38:52 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,11 @@ char	*ft_cut_line(char *memom)
 
 char	*get_next_line(int fd)
 {
-	static char	*memom;
+	static char	*memom = NULL;
 	char		buff[BUFFER_SIZE + 1];
 	char		*nl;
 	int			n;
 
-	memom = NULL;
 	nl = NULL;
 	n = BUFFER_SIZE;
 	buff[n] = '\0';

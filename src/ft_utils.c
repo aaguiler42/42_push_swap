@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 18:39:40 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/06/07 16:20:28 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/06/07 17:36:41 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	ft_search_and_replace(int *stack_a, int *aux, int min, int i)
 	while (aux[j] != min)
 		j++;
 	stack_a[j] = i;
-	aux[j] = 2147483647;
+	aux[j] = -2147483648;
 }
 
 void	ft_transform_array(int *stack_a, int len, int *aux)
@@ -50,7 +50,8 @@ void	ft_transform_array(int *stack_a, int len, int *aux)
 		j = 0;
 		while (j < len)
 		{
-			if (aux[j] < min)
+			if ((aux[j] < min && aux[j] != -2147483648)
+				|| (i == 0 && aux[j] == -2147483648))
 				min = aux[j];
 			j++;
 		}

@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 18:41:38 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/06/07 16:23:12 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/06/07 17:00:09 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int			ft_atoi(char *str, t_stacks *stacks);
 char		**ft_split(char const *s, char c);
 int			ft_count_words(char const *s, char c);
 void		*ft_calloc(int count, int size);
+int			ft_strncmp(const char *s1, const char *s2, int n);
 
 //Operations functions
 void		ft_swap_a(t_stacks *stacks, int print);
