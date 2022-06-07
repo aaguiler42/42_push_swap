@@ -6,17 +6,18 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 18:50:01 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/06/07 16:59:27 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/06/07 18:25:36 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdio.h>
 
 int	ft_atoi(char *str, t_stacks *stacks)
 {
-	int	i;
-	int	sign;
-	int	finalint;
+	int		i;
+	int		sign;
+	long	finalint;
 
 	i = 0;
 	sign = 1;
@@ -34,9 +35,11 @@ int	ft_atoi(char *str, t_stacks *stacks)
 			ft_error(stacks);
 		i++;
 	}
-	if ((sign > 0 && finalint * sign < 0) || (sign < 0 && finalint * sign > 0))
+	finalint *= sign;
+	if ((i > 10 && sign == 1) || (i > 11 && sign == -1)
+		|| finalint > 2147483647 || finalint < -2147483648)
 		ft_error(stacks);
-	return (finalint * sign);
+	return (finalint);
 }
 
 void	*ft_calloc(int count, int size)
