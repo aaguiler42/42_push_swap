@@ -6,12 +6,35 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 14:04:50 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/06/06 14:04:53 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/06/07 12:58:29 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 #include <unistd.h>
+
+void	ft_radix(t_stacks *stacks)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (ft_is_ordered(stacks) != 1)
+	{
+		j = 0;
+		while (j < stacks->max_size)
+		{
+			if (stacks->stack_a[0] >> i & 1)
+				ft_rotate_a(stacks, 1);
+			else
+				ft_push_b(stacks, 1);
+			j++;
+		}
+		while (stacks->size_b != 0)
+			ft_push_a(stacks, 1);
+		i++;
+	}
+}
 
 void	ft_order_three(t_stacks *st)
 {
