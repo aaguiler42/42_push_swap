@@ -6,11 +6,11 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 19:09:04 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/06/05 16:56:11 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/06/07 16:09:11 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 #include <stdio.h>
 
 void	ft_print_struct(t_stacks *stacks)

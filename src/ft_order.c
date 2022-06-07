@@ -6,11 +6,11 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 14:04:50 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/06/07 13:54:32 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/06/07 16:09:06 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 #include <unistd.h>
 
 void	ft_radix(t_stacks *stacks)
@@ -73,7 +73,6 @@ void	ft_order_five(t_stacks *stacks)
 
 void	ft_order(t_stacks *stacks)
 {
-	//	ft_print_struct(stacks);
 	if (stacks->max_size == 2)
 		ft_swap_a(stacks, 1);
 	else if (stacks->max_size == 3)
@@ -82,5 +81,4 @@ void	ft_order(t_stacks *stacks)
 		ft_order_five(stacks);
 	else
 		ft_radix(stacks);
-	//	ft_print_struct(stacks);
 }

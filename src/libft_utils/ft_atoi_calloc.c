@@ -6,11 +6,11 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 18:50:01 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/06/05 11:52:56 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/06/07 16:23:00 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/push_swap.h"
+#include "push_swap.h"
 
 int	ft_atoi(char *str, t_stacks *stacks)
 {
@@ -39,10 +39,10 @@ int	ft_atoi(char *str, t_stacks *stacks)
 	return (finalint * sign);
 }
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_calloc(int count, int size)
 {
 	char	*memory;
-	size_t	i;
+	int		i;
 
 	i = 0;
 	memory = malloc(count * size);

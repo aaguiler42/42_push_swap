@@ -6,11 +6,11 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 14:18:56 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/06/05 16:35:16 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/06/07 16:08:51 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/push_swap.h"
+#include "push_swap.h"
 #include <unistd.h>
 
 void	ft_reverse_rotate_a(t_stacks *stack, int print)

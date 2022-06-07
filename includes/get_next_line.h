@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/02 10:16:01 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/06/07 16:20:37 by aaguiler         ###   ########.fr       */
+/*   Created: 2022/04/27 17:55:42 by aaguiler          #+#    #+#             */
+/*   Updated: 2022/06/07 16:23:17 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-int	main(int argc, char **argv)
-{
-	t_stacks	*stacks;
+# define BUFFER_SIZE 20
+# include <fcntl.h>
+# include <stdlib.h>
+# include <unistd.h>
 
-	stacks = ft_inicialize_stacks(++argv, argc - 1);
-	if (ft_is_ordered(stacks) == 0)
-		ft_order(stacks);
-	ft_free_stacks(stacks);
-}
+char	*get_next_line(int fd);
+int		ft_strlen(char *str);
+int		ft_is_line(char *memom, int n);
+char	*ft_strjoin(char *memom, char *buff, int n);
+int		ft_line_len(char *memom);
+char	*ft_get_line(char *memom);
+
+#endif

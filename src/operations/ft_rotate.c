@@ -6,11 +6,11 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 13:18:56 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/06/07 13:46:15 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/06/07 16:08:54 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/push_swap.h"
+#include "push_swap.h"
 #include <unistd.h>
 
 void	ft_rot(int *stack, int stack_len, int n)

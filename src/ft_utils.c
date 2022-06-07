@@ -6,11 +6,11 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 18:39:40 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/06/05 16:42:36 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/06/07 16:20:28 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 int	ft_is_ordered(t_stacks *stacks)
 {
@@ -99,6 +99,4 @@ void	ft_fill_stack(t_stacks *stacks, char **numbers, int n)
 		ft_fill_array(stacks, nums);
 		free(nums);
 	}
-	if (ft_is_ordered(stacks) == 0)
-		ft_order(stacks);
 }
