@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 16:14:35 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/06/07 17:10:05 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/06/07 18:32:10 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	ft_is_operation(char *op, t_stacks *stacks)
 		ft_reverse_rotate_a(stacks, 0);
 	else if (!ft_strncmp(op, "rrb\n", 4))
 		ft_reverse_rotate_b(stacks, 0);
-	else if (!ft_strncmp(op, "rrb\n", 4))
+	else if (!ft_strncmp(op, "rrr\n", 4))
 		ft_reverse_rotate_both(stacks, 0);
 	else
 		ft_error(stacks);
@@ -62,7 +62,6 @@ int	main(int argc, char **argv)
 	t_stacks	*stacks;
 
 	stacks = ft_inicialize_stacks(++argv, argc - 1);
-	if (ft_is_ordered(stacks) == 0)
-		ft_check(stacks);
+	ft_check(stacks);
 	ft_free_stacks(stacks);
 }
