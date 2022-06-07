@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 14:04:50 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/06/07 13:40:15 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/06/07 13:54:32 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,8 @@ void	ft_order_three(t_stacks *st)
 		ft_reverse_rotate_a(st, 1);
 	else if (st->stack_a[1] > st->stack_a[2] && st->stack_a[2] > st->stack_a[0])
 	{
-		ft_push_b(st, 1);
+		ft_reverse_rotate_a(st, 1);
 		ft_swap_a(st, 1);
-		ft_push_a(st, 1);
 	}
 }
 
